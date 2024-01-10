@@ -21,6 +21,14 @@ display: flex;
    font-size: 20px;
 }
 
+.unorderlist{
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+
+
+
 .product-Cont{
 
 width: 70vw;
@@ -34,8 +42,8 @@ padding: 10px;
 
 .name{
     list-style-type:none;
-    margin-left: none;
-    padding-left: none;
+    padding: 0px;
+    margin-bottom: 0px;
     height: 40vh;
     
 }
@@ -50,6 +58,9 @@ padding: 10px;
     flex-direction: row;
    
 }
+
+
+
 
 .subContImg{
     background-color: #F3F5F5;
@@ -94,3 +105,4 @@ padding: 10px;
     font-size: 25px;
     font-weight: 700;
 }
+
