@@ -1,0 +1,96 @@
+.Main-Cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+}
+.inputsearch{
+    width: 30vw;
+    height: 4vh;
+}
+
+.top-sub-cont{
+text-align: center;
+align-items: center;
+display: flex;
+}
+
+.sizeicon{
+   padding: 10px;
+   font-size: 20px;
+}
+
+.product-Cont{
+
+width: 70vw;
+border-radius: 10px;
+border-color: black;
+border-width: 1px;
+border-style: solid;
+margin-top: 30px;
+padding: 10px;
+}
+
+.name{
+    list-style-type:none;
+    margin-left: none;
+    padding-left: none;
+    height: 40vh;
+    
+}
+.subContPrd{
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 2px 2px #888888;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.subContImg{
+    background-color: #F3F5F5;
+    height: 175px;
+    width: 175px;
+    margin-right: 20px;
+}
+
+.newBoxcss{
+    background-color: 	#CCFF78;
+    height: 30px;
+    width: 102px;
+    border-width: 0px;
+    border-radius: 10px;
+}
+
+.capImg{
+    height: 120px;
+    width: 120px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.prductName{
+    color: black;
+    font-size: 12px;
+    font-family: 'inter';
+    font-weight: 600;
+   
+    
+}
+
+
+
+
+.prductNameSps{
+    font-family: "inter";
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+}
