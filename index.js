@@ -1,14 +1,18 @@
+let inputElement =document.getElementById("inputEle")
 let orderListCont =document.getElementById("user")
 
+let userInput = ""
+let searchList = []
+
+
+//function started for the main page 
 function appendTheFinalResult(eachOne){
-console.log(eachOne)
 
 let {product_image,product_badge,product_title
 ,product_variants} = eachOne
 
 let [v1,v2,v3 ] = product_variants
 
- console.log(v1.v1)
 
 let list = document.createElement("li")
 list.classList.add("name")
@@ -60,23 +64,33 @@ let prdouctSp3 = document.createElement("h4")
 prdouctSp3.textContent=v3.v3
 prdouctSp3.classList.add("prductName")
 namePrdouct.appendChild(prdouctSp3)
-
 }
+
 
 function getEachOneOut(data){
-
     for (let eachOne of data){
         appendTheFinalResult(eachOne)
+        searchList.push(eachOne)
     }
-
 }
 
+function getSearchItems(userInput){
+    orderListCont.textContent=""
 
+    for(let getSearchItm of searchList){
+ let brandName = getSearchItm.product_title
+if (brandName.includes(userInput) ){
+    appendTheFinalResult(getSearchItm)
+}
+ }  }
+
+
+
+/// Start from here:--- API calling 
 
 let url ="https://mocki.io/v1/0934df88-6bf7-41fd-9e59-4fb7b8758093"
 let options={
 method:"GET"
-
 }
 
 fetch(url,options)
@@ -86,11 +100,15 @@ return response.json()
 })
 
 .then(function(jsonData){
-
 let {data} = jsonData
-console.log(data)
-
 getEachOneOut(data)
-
-
 })
+    
+//End API .......
+
+function getEachresult(event){
+    userInput=event.target.value
+    getSearchItems(userInput)
+}
+
+inputElement.addEventListener("keyup", getEachresult)
