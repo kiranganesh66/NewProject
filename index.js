@@ -67,6 +67,7 @@ namePrdouct.appendChild(prdouctSp3)
 }
 
 
+
 function getEachOneOut(data){
     for (let eachOne of data){
         appendTheFinalResult(eachOne)
@@ -78,7 +79,7 @@ function getSearchItems(userInput){
     orderListCont.textContent=""
 
     for(let getSearchItm of searchList){
- let brandName = getSearchItm.product_title
+ let brandName =(getSearchItm.product_title).toLocaleLowerCase()
 if (brandName.includes(userInput) ){
     appendTheFinalResult(getSearchItm)
 }
@@ -107,7 +108,8 @@ getEachOneOut(data)
 //End API .......
 
 function getEachresult(event){
-    userInput=event.target.value
+    userInput=(event.target.value).toLocaleLowerCase()
+    
     getSearchItems(userInput)
 }
 
